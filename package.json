@@ -1,0 +1,63 @@
+{
+  "name": "@stoplight/js-coding-challenge",
+  "version": "1.0.0",
+  "description": "HTTP request maker for an OAS2 spec.",
+  "keywords": [
+    "stoplight",
+    "oas",
+    "swagger",
+    "http",
+    "chrome-extension",
+    "typescript",
+    "react",
+    "mobx",
+    "webpack"
+  ],
+  "author": "lottamus",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stoplightio/js-coding-challenge.git"
+  },
+  "scripts": {
+    "start": "npm run-script watch",
+    "build": "npm run-script build-prod",
+    "watch": "cross-env NODE_ENV=development webpack -w",
+    "build-dev": "cross-env NODE_ENV=development webpack",
+    "build-prod": "cross-env NODE_ENV=production webpack",
+    "clean": "rimraf ./dist",
+    "lint": "tslint -p tsconfig.json"
+  },
+  "dependencies": {
+    "mobx": "^5.0.3",
+    "mobx-react": "^5.2.5",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.47",
+    "@types/node": "^8.0.11",
+    "@types/react": "^15.0.38",
+    "@types/react-dom": "^15.5.1",
+    "@types/swagger-schema-official": "^2.0.10",
+    "@types/webpack": "^3.0.4",
+    "clean-webpack-plugin": "^0.1.16",
+    "copy-webpack-plugin": "^4.0.1",
+    "cross-env": "^5.0.1",
+    "css-loader": "^0.28.4",
+    "file-loader": "^0.11.2",
+    "postcss-loader": "^2.0.6",
+    "prettier": "^1.14.2",
+    "rimraf": "^2.6.1",
+    "style-loader": "^0.18.2",
+    "ts-loader": "^2.2.2",
+    "ts-node": "^3.2.0",
+    "tslint": "^5.5.0",
+    "tslint-config-prettier": "^1.14.0",
+    "tslint-loader": "^3.5.3",
+    "tslint-plugin-prettier": "^1.3.0",
+    "tsutils": "^2.6.1",
+    "typescript": "^2.4.1",
+    "webpack": "^3.2.0"
+  }
+}

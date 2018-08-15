@@ -1,0 +1,34 @@
+{
+  "version": "0.0.1",
+  "name": "Stoplight Coding Challenge",
+  "description": "HTTP request maker for an OAS2 spec.",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon.png"
+  },
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": "Stoplight Coding Challenge",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "common.js",
+        "content.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "background": {
+    "scripts": [
+      "common.js",
+      "background.js"
+    ]
+  },
+  "permissions": ["contextMenus", "management", "tabs", "storage", "<all_urls>"],
+  "content_security_policy": "default-src 'self'; script-src 'self' http://localhost:3000 https://localhost:3000 'unsafe-eval'; connect-src http://* https://* 'unsafe-eval' 'unsafe-inline'; style-src * 'unsafe-inline' 'self' blob:; img-src 'self' data:;"
+}
